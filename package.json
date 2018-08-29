@@ -1,0 +1,23 @@
+{
+  "name": "ivue",
+  "version": "0.0.1",
+  "description": "\u001b[A\u001b[A\u001b[B\u001b[Bvue ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junhoo/ivue.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "junho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junhoo/ivue/issues"
+  },
+  "homepage": "https://github.com/junhoo/ivue#readme"
+}
