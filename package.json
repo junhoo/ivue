@@ -4,6 +4,7 @@
   "description": "\u001b[A\u001b[A\u001b[B\u001b[Bvue ui",
   "main": "dist/index.js",
   "scripts": {
+    "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
