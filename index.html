@@ -1,89 +1,47 @@
 <!doctype html>
 <html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yi-ui</title>
-    <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        html {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-        #app {
-        }
-        body {
-            font-size: var(--font-size);
-        }
-    </style>
-    <style>
-        .box{
-            margin: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>yi-ui</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    img {max-width: 100%;}
+    html {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+    #app {
+    }
+    body {
+      font-size: var(--font-size);
+    }
+  </style>
 </head>
 <body>
-<div id="app">
-    <g-tabs>
-        <div>hi</div>
-    </g-tabs>
-    <g-tabs :selected.sync="selectedTab" @update:selected="yyy">
-        <g-tabs-head>
-            <template slot="actions">
-                <button>设置</button>
-            </template>
-            <g-tabs-item name="woman">
-                <g-icon name="settings"></g-icon>机票
-            </g-tabs-item>
-            <g-tabs-item name="finance" disabled>
-                酒店
-            </g-tabs-item>
-            <g-tabs-item name="sports">
-                火车
-            </g-tabs-item>
-        </g-tabs-head>
-        <g-tabs-body>
-            <g-tabs-pane name="woman">
-                国际·港澳台机票
-            </g-tabs-pane>
-            <g-tabs-pane name="finance">
-                客栈民宿
-            </g-tabs-pane>
-            <g-tabs-pane name="sports">
-                高铁动车
-            </g-tabs-pane>
-        </g-tabs-body>
-    </g-tabs>
-    <div class="box">
-        <g-input v-model="message"></g-input>
-        <p>{{message}}</p>
-        <button @click="message+=1">+1</button>
-    </div>
-    <div class="box">
-        <g-button :loading="loading1" @click="loading1 = !loading1">
-            按钮
-        </g-button>
-        <g-button icon="settings" :loading="loading2"
-            @click="loading2 = !loading2">
-            按钮
-        </g-button>
-        <g-button icon="settings" icon-position="right" :loading="loading3"
-            @click="loading3 = !loading3">
-            按钮
-        </g-button>
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-    </div>
+
+<div id="app" style="padding-top: 100px; padding-left: 100px;">
+
+  <g-popover>
+    <template slot="content">
+        <div>popover内容</div>
+    </template>
+    <button>点我</button>
+  </g-popover>
+  <g-popover>
+    <template slot="content">
+      <div>popover内容</div>
+    </template>
+    <button>点我</button>
+  </g-popover>
+
 </div>
 <script src="./src/app.js"></script>
 </body>
