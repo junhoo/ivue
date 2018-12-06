@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click.stop="onClick" ref="popover">
+  <div class="popover" @click="onClick" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -9,7 +9,7 @@
   </div>
 </template>
 
- <script>
+<script>
   export default {
     name: "GuluPopover",
     data () {
@@ -20,7 +20,7 @@
         document.body.appendChild(this.$refs.contentWrapper)
         let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
         this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollX + 'px'
+        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
       },
       onClickDocument (e) {
         if (this.$refs.popover &&
@@ -39,7 +39,7 @@
         this.visible = false
         document.removeEventListener('click', this.onClickDocument)
       },
-      onClick () {
+      onClick (event) {
         if (this.$refs.triggerWrapper.contains(event.target)) {
 
           if (this.visible === true) {
@@ -53,7 +53,7 @@
   }
 </script>
 
- <style scoped lang="scss">
+<style scoped lang="scss">
   .popover {
     display: inline-block;
     vertical-align: top;
