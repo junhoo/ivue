@@ -1,5 +1,9 @@
 <template>
+<<<<<<< Updated upstream
+  <div class="popover" ref="popover">
+=======
   <div class="popover" @click="onClick" ref="popover">
+>>>>>>> Stashed changes
     <div ref="contentWrapper" class="content-wrapper" v-if="visible"
       :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
@@ -16,6 +20,25 @@
     data () {
       return {visible: false}
     },
+<<<<<<< Updated upstream
+    mounted () {
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click', this.onClick)
+      } else {
+        this.$refs.popover.addEventListener('mouseenter', this.open)
+        this.$refs.popover.addEventListener('mouseleave', this.close)
+      }
+    },
+    destroyed () {
+      if (this.trigger === 'click') {
+        this.$refs.popover.removeEventListener('click', this.onClick)
+      } else {
+        this.$refs.popover.removeEventListener('mouseenter', this.open)
+        this.$refs.popover.removeEventListener('mouseleave', this.close)
+      }
+    },
+=======
+>>>>>>> Stashed changes
     props: {
       position: {
         type: String,
@@ -23,6 +46,16 @@
         validator (value) {
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
         }
+<<<<<<< Updated upstream
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator (value) {
+          return ['click', 'hover'].indexOf(value) >= 0
+        }
+=======
+>>>>>>> Stashed changes
       }
     },
     methods: {
@@ -111,6 +144,10 @@
       transform: translateY(-100%);
       margin-top: -10px;
       &::before, &::after {
+<<<<<<< Updated upstream
+        border-bottom: none;
+=======
+>>>>>>> Stashed changes
         left: 10px;
       }
       &::before {
@@ -121,6 +158,41 @@
         border-top-color: white;
         top: calc(100% - 1px);
       }
+<<<<<<< Updated upstream
+    }
+    &.position-bottom {
+      margin-top: 10px;
+      &::before, &::after {
+        border-top: none;
+        left: 10px;
+      }
+      &::before {
+        border-bottom-color: black;
+        bottom: 100%;
+      }
+      &::after {
+        border-bottom-color: white;
+        bottom: calc(100% - 1px);
+      }
+    }
+    &.position-left {
+      transform: translateX(-100%);
+      margin-left: -10px;
+      &::before, &::after {
+        transform: translateY(-50%);
+        border-right: none;
+        top: 50%;
+      }
+      &::before {
+        border-left-color: black;
+        left: 100%;
+      }
+      &::after {
+        border-left-color: white;
+        left: calc(100% - 1px);
+      }
+    }
+=======
     }
     &.position-bottom {
       margin-top: 10px;
@@ -152,10 +224,15 @@
         left: calc(100% - 1px);
       }
     }
+>>>>>>> Stashed changes
     &.position-right {
       margin-left: 10px;
       &::before, &::after {
         transform: translateY(-50%);
+<<<<<<< Updated upstream
+        border-left: none;
+=======
+>>>>>>> Stashed changes
         top: 50%;
       }
       &::before {
