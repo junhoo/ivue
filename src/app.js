@@ -31,12 +31,6 @@ new Vue({
     selectedTab: 'sports'
   },
   created(){
-    setTimeout(()=>{
-      let event = new Event('change');
-      let inputElement = this.$el.querySelector('input')
-      inputElement.dispatchEvent(event)
-      console.log('hi')
-    },3000)
   },
   methods: {
     yyy (data) {
