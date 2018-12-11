@@ -1,12 +1,8 @@
 <template>
-<<<<<<< Updated upstream
   <div class="popover" ref="popover">
-=======
-  <div class="popover" @click="onClick" ref="popover">
->>>>>>> Stashed changes
     <div ref="contentWrapper" class="content-wrapper" v-if="visible"
       :class="{[`position-${position}`]:true}">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -20,7 +16,6 @@
     data () {
       return {visible: false}
     },
-<<<<<<< Updated upstream
     mounted () {
       if (this.trigger === 'click') {
         this.$refs.popover.addEventListener('click', this.onClick)
@@ -37,8 +32,6 @@
         this.$refs.popover.removeEventListener('mouseleave', this.close)
       }
     },
-=======
->>>>>>> Stashed changes
     props: {
       position: {
         type: String,
@@ -46,7 +39,6 @@
         validator (value) {
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
         }
-<<<<<<< Updated upstream
       },
       trigger: {
         type: String,
@@ -54,8 +46,6 @@
         validator (value) {
           return ['click', 'hover'].indexOf(value) >= 0
         }
-=======
->>>>>>> Stashed changes
       }
     },
     methods: {
@@ -144,10 +134,7 @@
       transform: translateY(-100%);
       margin-top: -10px;
       &::before, &::after {
-<<<<<<< Updated upstream
         border-bottom: none;
-=======
->>>>>>> Stashed changes
         left: 10px;
       }
       &::before {
@@ -158,7 +145,6 @@
         border-top-color: white;
         top: calc(100% - 1px);
       }
-<<<<<<< Updated upstream
     }
     &.position-bottom {
       margin-top: 10px;
@@ -192,47 +178,11 @@
         left: calc(100% - 1px);
       }
     }
-=======
-    }
-    &.position-bottom {
-      margin-top: 10px;
-      &::before, &::after {
-        left: 10px;
-      }
-      &::before {
-        border-bottom-color: black;
-        bottom: 100%;
-      }
-      &::after {
-        border-bottom-color: white;
-        bottom: calc(100% - 1px);
-      }
-    }
-    &.position-left {
-      transform: translateX(-100%);
-      margin-left: -10px;
-      &::before, &::after {
-        transform: translateY(-50%);
-        top: 50%;
-      }
-      &::before {
-        border-left-color: black;
-        left: 100%;
-      }
-      &::after {
-        border-left-color: white;
-        left: calc(100% - 1px);
-      }
-    }
->>>>>>> Stashed changes
     &.position-right {
       margin-left: 10px;
       &::before, &::after {
         transform: translateY(-50%);
-<<<<<<< Updated upstream
         border-left: none;
-=======
->>>>>>> Stashed changes
         top: 50%;
       }
       &::before {
