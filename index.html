@@ -23,6 +23,9 @@
     body {
       font-size: var(--font-size);
     }
+    .content {
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -30,60 +33,11 @@
 <div id="app">
   
   <div style="overflow: hidden; padding: 150px;">
-    <g-popover position="bottom">
-      <template slot="content" slot-scope="{close}">
-        <div>文字</div>
-        <div>popover <a href="http://qq.com">新闻网</a> 内容</div>
-        <g-button @click="close">关闭</g-button>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="top">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="left">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="right">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-  </div>
-
-  <div style="overflow: hidden; padding-left: 150px;">
-    <g-popover position="bottom" trigger="hover">
-      <template slot="content">
-        <div>click click click click click click click click click click click click</div>
-        <div>click click click click click click click click click click click click</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="top" trigger="hover">
-      <template slot="content">
-        <div>popover <a href="http://qq.com">新闻网</a> 内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="left" trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
-    <g-popover position="right" trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>点我</g-button>
-    </g-popover>
+    <g-collapse>
+      <g-collapse-item title="标题1"><div class="content">内容1</div></g-collapse-item>
+      <g-collapse-item title="标题2"><div class="content">内容2</div></g-collapse-item>
+      <g-collapse-item title="标题3"><div class="content">内容3</div></g-collapse-item>
+    </g-collapse>
   </div>
 
 </div>
