@@ -33,7 +33,7 @@
 <div id="app">
   
   <div style="overflow: hidden; padding: 150px;">
-    <g-collapse :select.sync="selectedTab">
+    <g-collapse :selected.sync="selectedTab" single>
       <g-collapse-item title="标题1" name="1"><div class="content">内容1</div></g-collapse-item>
       <g-collapse-item title="标题2" name="2"><div class="content">内容2</div></g-collapse-item>
       <g-collapse-item title="标题3" name="3"><div class="content">内容3</div></g-collapse-item>
