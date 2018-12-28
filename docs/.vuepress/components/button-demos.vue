@@ -1,9 +1,9 @@
  <template>
   <div>
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">默认按钮</g-button>
-    <g-button :loading="true">默认按钮</g-button>
-    <g-button disabled>默认按钮</g-button>
+    <yi-button>默认按钮</yi-button>
+    <yi-button icon="settings">默认按钮</yi-button>
+    <yi-button :loading="true">默认按钮</yi-button>
+    <yi-button disabled>默认按钮</yi-button>
 
     <pre><code>{{content}}</code></pre>
   </div>
@@ -13,15 +13,15 @@
 
   export default {
     components: {
-      'g-button': Button
+      'yi-button': Button
     },
     data () {
       return {
         content: `
-        <g-button>默认按钮</g-button>
-        <g-button icon="settings">默认按钮</g-button>
-        <g-button :loading="true">默认按钮</g-button>
-        <g-button disabled>默认按钮</g-button>
+        <yi-button>默认按钮</yi-button>
+        <yi-button icon="settings">默认按钮</yi-button>
+        <yi-button :loading="true">默认按钮</yi-button>
+        <yi-button disabled>默认按钮</yi-button>
       `.replace(/\t+| +/g, '').trim()
       }
     }

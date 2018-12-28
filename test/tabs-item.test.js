@@ -6,11 +6,11 @@ import TabsBody from '../src/tabs-body'
 import TabsItem from '../src/tabs-item'
 import TabsPane from '../src/tabs-pane'
 
-Vue.component('g-tabs', Tabs)
-Vue.component('g-tabs-head', TabsHead)
-Vue.component('g-tabs-body', TabsBody)
-Vue.component('g-tabs-item', TabsItem)
-Vue.component('g-tabs-pane', TabsPane)
+Vue.component('yi-tabs', Tabs)
+Vue.component('yi-tabs-head', TabsHead)
+Vue.component('yi-tabs-body', TabsBody)
+Vue.component('yi-tabs-item', TabsItem)
+Vue.component('yi-tabs-pane', TabsPane)
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

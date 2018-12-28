@@ -12,18 +12,18 @@ import Popover from './popover'
 import Collapse from './collapse'
 import CollapseItem from './collapse-item'
 
-Vue.component('g-button', Button)
-Vue.component('g-icon', Icon)
-Vue.component('g-button-group', ButtonGroup)
-Vue.component('g-input', Input)
-Vue.component('g-tabs', Tabs)
-Vue.component('g-tabs-head', TabsHead)
-Vue.component('g-tabs-body', TabsBody)
-Vue.component('g-tabs-item', TabsItem)
-Vue.component('g-tabs-pane', TabsPane)
-Vue.component('g-popover', Popover)
-Vue.component('g-collapse', Collapse)
-Vue.component('g-collapse-item', CollapseItem)
+Vue.component('yi-button', Button)
+Vue.component('yi-icon', Icon)
+Vue.component('yi-button-group', ButtonGroup)
+Vue.component('yi-input', Input)
+Vue.component('yi-tabs', Tabs)
+Vue.component('yi-tabs-head', TabsHead)
+Vue.component('yi-tabs-body', TabsBody)
+Vue.component('yi-tabs-item', TabsItem)
+Vue.component('yi-tabs-pane', TabsPane)
+Vue.component('yi-popover', Popover)
+Vue.component('yi-collapse', Collapse)
+Vue.component('yi-collapse-item', CollapseItem)
 
 new Vue({
   el: '#app',

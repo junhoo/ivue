@@ -1,4 +1,5 @@
 module.exports = {
+  base: 'ivue',
   title: 'Yiz-UI',
   description: '一个简易的UI框架',
   themeConfig: {
@@ -17,7 +18,13 @@ module.exports = {
       },
       {
         title: '组件',
-        children: ['/components/button']
+        children: [
+          '/components/button',
+          '/components/collapse',
+          '/components/input',
+          '/components/popover',
+          '/components/tabs'
+        ]
       },
 
      ]

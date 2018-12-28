@@ -14,16 +14,16 @@ Vue.config.devtools = false
 
   it('接受 selected 属性', (done) => {
 
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('yi-collapse', Collapse)
+    Vue.component('yi-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected="xxx">
-          <g-collapse-item title="标题1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="标题2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="标题3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <yi-collapse :selected="xxx">
+          <yi-collapse-item title="标题1" name="1"><span id="content-1">1</span></yi-collapse-item>
+          <yi-collapse-item title="标题2" name="2"><span id="content-2">2</span></yi-collapse-item>
+          <yi-collapse-item title="标题3" name="3"><span id="content-3">3</span></yi-collapse-item>
+        </yi-collapse>
     `
     const vm = new Vue({
       el: div,
@@ -41,16 +41,16 @@ Vue.config.devtools = false
 
   it('接受 single 属性', (done) => {
 
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('yi-collapse', Collapse)
+    Vue.component('yi-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected.sync="xxx" single>
-          <g-collapse-item title="标题1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="标题2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="标题3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <yi-collapse :selected.sync="xxx" single>
+          <yi-collapse-item title="标题1" name="1"><span id="content-1">1</span></yi-collapse-item>
+          <yi-collapse-item title="标题2" name="2"><span id="content-2">2</span></yi-collapse-item>
+          <yi-collapse-item title="标题3" name="3"><span id="content-3">3</span></yi-collapse-item>
+        </yi-collapse>
     `
     const vm = new Vue({
       el: div,
@@ -69,16 +69,16 @@ Vue.config.devtools = false
   })
 
   it('触发 update:selected 事件', (done) => {
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('yi-collapse', Collapse)
+    Vue.component('yi-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected="xxx" @update:selected="onSelect">
-          <g-collapse-item title="标题1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="标题2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="标题3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <yi-collapse :selected="xxx" @update:selected="onSelect">
+          <yi-collapse-item title="标题1" name="1"><span id="content-1">1</span></yi-collapse-item>
+          <yi-collapse-item title="标题2" name="2"><span id="content-2">2</span></yi-collapse-item>
+          <yi-collapse-item title="标题3" name="3"><span id="content-3">3</span></yi-collapse-item>
+        </yi-collapse>
     `
     const callback = sinon.fake();
     const vm = new Vue({
