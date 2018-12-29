@@ -11,6 +11,8 @@ import TabsPane from './tabs-pane'
 import Popover from './popover'
 import Collapse from './collapse'
 import CollapseItem from './collapse-item'
+import Cascader from './cascader'
+import CascaderItem from './cascader-item'
 
 Vue.component('yi-button', Button)
 Vue.component('yi-icon', Icon)
@@ -24,24 +26,57 @@ Vue.component('yi-tabs-pane', TabsPane)
 Vue.component('yi-popover', Popover)
 Vue.component('yi-collapse', Collapse)
 Vue.component('yi-collapse-item', CollapseItem)
-
+Vue.component('yi-cascader', Cascader)
+Vue.component('yi-cascader-item', CascaderItem)
 new Vue({
   el: '#app',
   data: {
-    loading1: false,
-    loading2: true,
-    loading3: false,
-    message: 'hi',
-    selectedTab: ['2', '1']
+    source: [{
+      name: '广东',
+      children: [
+        {
+          name: '广州',
+          children: [
+            {name: '天河'},
+            {name: '珠江'},
+            {name: '番禺'},
+          ]
+        },
+        {
+          name: '深圳',
+          children: [
+            {name: '罗湖'},
+            {name: '福田'},
+            {name: '南山'},
+          ]
+        },
+      ]
+    }, {
+      name: '福建',
+      children: [
+        {
+          name: '福州',
+          children: [
+            {name: '鼓楼'},
+            {name: '台江'},
+            {name: '仓山'},
+          ]
+        },
+      ]
+    }, {
+      name: '安徽',
+      children: [{
+        name: '合肥',
+        children: [{
+          name: '瑶海'
+        }, {
+          name: '庐阳'
+        }]
+      }]
+    }]
   },
   created(){
   },
   methods: {
-    yyy (data) {
-      console.log('yyy')
-    },
-    inputChange (e) {
-      console.log(e)
-    }
   }
 })

@@ -33,12 +33,7 @@
 <div id="app">
   
   <div style="overflow: hidden; padding: 150px;">
-    <yi-collapse :selected.sync="selectedTab">
-      <yi-collapse-item title="标题1" name="1"><div class="content">内容1</div></yi-collapse-item>
-      <yi-collapse-item title="标题2" name="2"><div class="content">内容2</div></yi-collapse-item>
-      <yi-collapse-item title="标题3" name="3"><div class="content">内容3</div></yi-collapse-item>
-    </yi-collapse>
-    {{selectedTab}}
+    <yi-cascader :source="source"></yi-cascader>
   </div>
 
 </div>
