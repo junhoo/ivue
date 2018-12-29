@@ -1,4 +1,4 @@
-## yiz-ui 简易的 Vue UI 组件
+## yi-ui 简易的 Vue UI 组件
 
 [![Build Status](https://travis-ci.org/junhoo/ivue.svg?branch=master)](https://travis-ci.org/junhoo/ivue)
 

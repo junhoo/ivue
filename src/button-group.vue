@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name: 'GuluButtonGroup',
+    name: 'YiButtonGroup',
     mounted () {
       for (let node of this.$el.children) { // 检测子元素是不是 button
         let name = node.nodeName.toLowerCase()

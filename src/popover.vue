@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: "GuluPopover",
+    name: "YiPopover",
     data () {
       return {visible: false}
     },
