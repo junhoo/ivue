@@ -1,5 +1,5 @@
 module.exports = {
-  base: 'ivue',
+  base: '/ivue/',
   title: 'Yiz-UI',
   description: '一个简易的UI框架',
   themeConfig: {
